@@ -7,13 +7,23 @@
     "nuxt3": "latest"
   },
   "license": "MIT",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
-  },
   "devDependencies": {
     "nuxt": "3.0.0-rc.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ironexdev/store-forms"
+  },
+  "keywords": [
+    "Nuxt3",
+    "Nuxt",
+    "Typescript",
+    "Pinia",
+    "Store",
+    "Forms"
+  ],
+  "bugs": {
+    "url": "https://github.com/ironexdev/store-forms"
+  },
+  "homepage": "https://github.com/ironexdev/store-forms#readme"
 }
