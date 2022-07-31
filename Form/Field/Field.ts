@@ -2,7 +2,7 @@ import FieldInterface from "~/Form/Field/FieldInterface"
 import RuleInterface from "~/Form/Rules/RuleInterface";
 
 export default class Field implements FieldInterface {
-  public requiredErrorMessage: string
+  public requiredErrorMessage = "Required"
 
   constructor (
     public name: string,
@@ -10,9 +10,8 @@ export default class Field implements FieldInterface {
     public value,
     public rules: RuleInterface[],
     public required: boolean,
-    public errors: string[]
+    public errors: string[],
   ) {
-    this.requiredErrorMessage = "Required"
   }
 
   public isValid (): boolean {
@@ -21,7 +20,7 @@ export default class Field implements FieldInterface {
 
   public validate (): string[] {
     this.errors = []
-    console.log(this)
+
     for (let i = 0; i < this.rules.length; i++) {
       const rule = this.rules[i]
 
