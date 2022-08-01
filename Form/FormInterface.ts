@@ -1,5 +1,5 @@
 import { Ref } from "vue"
-import FieldInterface from "~/Form/Field/FieldInterface";
+import FieldInterface from "./Field/FieldInterface";
 
 export interface FormInterface {
   submitted: Ref<boolean>,

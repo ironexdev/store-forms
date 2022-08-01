@@ -1,5 +1,5 @@
-import FieldInterface from "~/Form/Field/FieldInterface"
-import RuleInterface from "~/Form/Rules/RuleInterface";
+import FieldInterface from "./FieldInterface";
+import RuleInterface from "../Rules/RuleInterface";
 
 export default class Field implements FieldInterface {
   public requiredErrorMessage = "Required"
@@ -20,6 +20,10 @@ export default class Field implements FieldInterface {
 
   public validate (): string[] {
     this.errors = []
+
+    if (this.required && !this.value.length) {
+      this.errors.push(this.requiredErrorMessage)
+    }
 
     for (let i = 0; i < this.rules.length; i++) {
       const rule = this.rules[i]

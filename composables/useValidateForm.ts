@@ -1,5 +1,5 @@
-import FieldInterface from "~/Form/Field/FieldInterface";
 import { useResetForm } from "./useResetForm";
+import FieldInterface from "../Form/Field/FieldInterface";
 
 export function useValidateForm(fields: FieldInterface[], valid: boolean): {[key: string]: string[]} {
     const errors = {}

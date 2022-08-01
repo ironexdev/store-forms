@@ -1,4 +1,4 @@
-import FieldInterface from "~/Form/Field/FieldInterface";
+import FieldInterface from "../Form/Field/FieldInterface";
 
 export function useResetForm(fields: FieldInterface[]) {
     const errors = []

@@ -1,4 +1,4 @@
-import RuleInterface from "~/Form/Rules/RuleInterface";
+import RuleInterface from "../Rules/RuleInterface";
 
 export default interface FieldInterface {
   name: string
