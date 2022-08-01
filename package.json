@@ -1,6 +1,6 @@
 {
   "name": "store-forms",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Typescript forms for Pinia store",
   "main": "nuxt.js",
   "peerDependencies": {
