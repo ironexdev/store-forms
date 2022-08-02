@@ -21,7 +21,7 @@ export default class Field implements FieldInterface {
   public validate (): string[] {
     this.errors = []
 
-    if (this.required && !this.value.length) {
+    if (this.required && typeof this.value === "boolean" ? !this.value : !this.value.length) {
       this.errors.push(this.requiredErrorMessage)
     }
 

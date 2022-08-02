@@ -3,14 +3,14 @@ import FieldInterface from "../Form/Field/FieldInterface";
 
 export function useValidateForm(fields: FieldInterface[], valid: boolean): {[key: string]: string[]} {
     const errors = {}
+
     useResetForm(fields)
-    valid = true
 
     for (let i = 0; i < fields.length; i++) {
       const field: FieldInterface = fields[i]
       const required = field.required
 
-      if (required && !field.value.length) {
+      if (required && typeof field.value === "boolean" ? !field.value : !field.value.length) {
         valid = false
 
         field.errors.push(field.requiredErrorMessage)
