@@ -15,7 +15,7 @@ export default class Field implements FieldInterface {
   }
 
   public isValid (): boolean {
-    return !!this.errors.length
+    return !this.errors.length
   }
 
   public validate (): string[] {
