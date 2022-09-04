@@ -1,13 +1,13 @@
 import { useResetForm } from "./useResetForm";
 import FieldInterface from "../Form/Field/FieldInterface";
 
-export function useValidateForm (form) { // form: FormInterface - TODO figure out how to properly type the Store
+export function useValidateForm (fields: FieldInterface[]): {[key: string]: string[]} {
   const errors = {}
 
-  useResetForm(form)
+  useResetForm(fields)
 
-  for (let i = 0; i < form.fields.length; i++) {
-    const field: FieldInterface = form.fields[i]
+  for (let i = 0; i < fields.length; i++) {
+    const field: FieldInterface = fields[i]
     const required = field.required
 
     if (required && (typeof field.value === "boolean" ? !field.value : !field.value.length)) {
@@ -40,7 +40,5 @@ export function useValidateForm (form) { // form: FormInterface - TODO figure ou
     }
   }
 
-  form.errors.value = errors
-  form.valid.value = !Object.keys(errors).length
+  return errors
 }
-
