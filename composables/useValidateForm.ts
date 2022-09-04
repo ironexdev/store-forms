@@ -2,7 +2,7 @@ import { useResetForm } from "./useResetForm";
 import FieldInterface from "../Form/Field/FieldInterface";
 import {FormInterface} from "../Form/FormInterface";
 
-export function useValidateForm (form: FormInterface, valid: boolean) {
+export function useValidateForm (form: FormInterface) {
   const errors = {}
 
   useResetForm(form)
