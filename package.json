@@ -1,6 +1,6 @@
 {
   "name": "store-forms",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Typescript forms for Pinia store",
   "main": "nuxt.js",
   "peerDependencies": {
@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "nuxt": "3.0.0-rc.6"
+    "nuxt": "3.0.0-rc.8"
   },
   "repository": {
     "type": "git",

@@ -8,6 +8,7 @@ export default interface FieldInterface {
   required: boolean
   errors: string[]
   requiredErrorMessage: string
+  description: string
 
   isValid(): boolean
 

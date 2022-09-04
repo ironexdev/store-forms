@@ -11,6 +11,7 @@ export default class Field implements FieldInterface {
     public rules: RuleInterface[],
     public required: boolean,
     public errors: string[],
+    public description = ""
   ) {
   }
 
