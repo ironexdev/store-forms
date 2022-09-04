@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/ironexdev/store-forms"
   },
-  "homepage": "https://github.com/ironexdev/store-forms#readme"
+  "homepage": "https://github.com/ironexdev/store-forms#readme",
+  "dependencies": {
+    "pinia": "^2.0.21"
+  }
 }

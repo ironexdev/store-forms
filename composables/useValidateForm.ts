@@ -1,13 +1,15 @@
 import { useResetForm } from "./useResetForm";
 import FieldInterface from "../Form/Field/FieldInterface";
+import {_ExtractActionsFromSetupStore, _ExtractGettersFromSetupStore, _ExtractStateFromSetupStore, defineStore, StoreDefinition} from "pinia"
+import {FormInterface} from "../Form/FormInterface";
 
-export function useValidateForm (fields: FieldInterface[]): {[key: string]: string[]} {
+export function useValidateForm (form: StoreDefinition<"ExampleForm", _ExtractStateFromSetupStore<FormInterface>, _ExtractGettersFromSetupStore<FormInterface>, _ExtractActionsFromSetupStore<FormInterface>>) {
   const errors = {}
 
-  useResetForm(fields)
+  useResetForm(form.fields)
 
-  for (let i = 0; i < fields.length; i++) {
-    const field: FieldInterface = fields[i]
+  for (let i = 0; i < form.fields.length; i++) {
+    const field: FieldInterface = form.fields[i]
     const required = field.required
 
     if (required && (typeof field.value === "boolean" ? !field.value : !field.value.length)) {
@@ -39,6 +41,4 @@ export function useValidateForm (fields: FieldInterface[]): {[key: string]: stri
       }
     }
   }
-
-  return errors
 }
