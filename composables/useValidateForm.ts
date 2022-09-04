@@ -3,7 +3,7 @@ import FieldInterface from "../Form/Field/FieldInterface";
 import {_ExtractActionsFromSetupStore, _ExtractGettersFromSetupStore, _ExtractStateFromSetupStore, defineStore, StoreDefinition} from "pinia"
 import {FormInterface} from "../Form/FormInterface";
 
-export function useValidateForm (form: StoreDefinition<"ExampleForm", _ExtractStateFromSetupStore<FormInterface>, _ExtractGettersFromSetupStore<FormInterface>, _ExtractActionsFromSetupStore<FormInterface>>) {
+export function useValidateForm (form: StoreDefinition<string, _ExtractStateFromSetupStore<FormInterface>, _ExtractGettersFromSetupStore<FormInterface>, _ExtractActionsFromSetupStore<FormInterface>>) {
   const errors = {}
 
   useResetForm(form.fields)
