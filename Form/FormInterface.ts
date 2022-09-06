@@ -7,5 +7,5 @@ export interface FormInterface {
   fields: FieldInterface[],
   errors: Ref<{ [key: string]: string[] }> | Ref<object>,
 
-  submit(): Promise<unknown>
+  submit(...args): Promise<unknown>
 }
